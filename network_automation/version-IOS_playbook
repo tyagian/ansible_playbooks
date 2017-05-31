@@ -1,0 +1,22 @@
+---
+- hosts: ios
+  gather_facts: no
+  connection: local
+
+  vars:
+    cli:
+      host: "{{ inventory_hostname }}"
+      username: cisco
+      password: cisco
+
+  tasks:
+  - name: SHOW VERSION
+    ios_command:
+      commands:
+        - show version | inc uptime
+        - show version | inc BOOTLDR
+        - show version | inc file
+      provider: "{{ cli }}"
+    register: version
+  
+  - debug: var=version.stdout_lines

@@ -1,0 +1,20 @@
+---
+- hosts: CSR-02
+  gather_facts: true
+  connection: local
+
+  tasks:
+    - name: show run
+      ios_command:
+        commands:
+          - show run
+        host: "{{ ansible_host }}"
+        username: anuj
+        password: cisco
+      register: backup
+  
+  - name: save output to /etc/ansible/backups
+    copy:
+      content: "{{ config.stdout[0] }}"
+      dest: "/etc/ansible/backups/show_run{{ inventory_hostname }}.txt"
+

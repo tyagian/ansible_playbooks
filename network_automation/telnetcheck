@@ -1,0 +1,633 @@
+2017-05-29 19:47:19,949 p=5778 u=anuj |  PLAY [ios] *********************************************************************
+2017-05-29 19:47:20,084 p=5778 u=anuj |  TASK [OBTAIN LOGIN CREDENTIALS] ************************************************
+2017-05-29 19:47:20,160 p=5778 u=anuj |  fatal: [192.168.25.10]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "an error occurred while trying to read the file '/etc/ansible/secrets.yaml': [Errno 13] Permission denied: '/etc/ansible/secrets.yaml'"}
+2017-05-29 19:47:20,163 p=5778 u=anuj |  fatal: [192.168.25.20]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "an error occurred while trying to read the file '/etc/ansible/secrets.yaml': [Errno 13] Permission denied: '/etc/ansible/secrets.yaml'"}
+2017-05-29 19:47:20,164 p=5778 u=anuj |  	to retry, use: --limit @/etc/ansible/telnet_playbook.retry
+
+2017-05-29 19:47:20,164 p=5778 u=anuj |  PLAY RECAP *********************************************************************
+2017-05-29 19:47:20,164 p=5778 u=anuj |  192.168.25.10              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-29 19:47:20,164 p=5778 u=anuj |  192.168.25.20              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-29 19:47:28,733 p=5793 u=root |  PLAY [ios] *********************************************************************
+2017-05-29 19:47:28,822 p=5793 u=root |  TASK [OBTAIN LOGIN CREDENTIALS] ************************************************
+2017-05-29 19:47:28,876 p=5793 u=root |  ok: [192.168.25.10]
+2017-05-29 19:47:28,883 p=5793 u=root |  ok: [192.168.25.20]
+2017-05-29 19:47:28,888 p=5793 u=root |  TASK [DEFINE PROVIDER] *********************************************************
+2017-05-29 19:47:29,014 p=5793 u=root |  ok: [192.168.25.10]
+2017-05-29 19:47:29,042 p=5793 u=root |  ok: [192.168.25.20]
+2017-05-29 19:47:29,045 p=5793 u=root |  TASK [TELNET CHECK] ************************************************************
+2017-05-29 19:47:32,027 p=5793 u=root |  ok: [192.168.25.20]
+2017-05-29 19:47:32,312 p=5793 u=root |  ok: [192.168.25.10]
+2017-05-29 19:47:32,345 p=5793 u=root |  TASK [debug] *******************************************************************
+2017-05-29 19:47:32,646 p=5793 u=root |  ok: [192.168.25.20] => {
+    "vty.stdout_lines": [
+        [
+            "line vty 0 4", 
+            " privilege level 15", 
+            " password ********", 
+            " login local", 
+            " transport input ssh", 
+            "!", 
+            "!", 
+            "end", 
+            ""
+        ]
+    ]
+}
+2017-05-29 19:47:32,649 p=5793 u=root |  ok: [192.168.25.10] => {
+    "vty.stdout_lines": [
+        [
+            "line vty 0 4", 
+            " privilege level 15", 
+            " password ********", 
+            " login local", 
+            " transport input ssh", 
+            "line vty 5 15", 
+            " privilege level 15", 
+            " login local", 
+            " transport input ssh", 
+            "!", 
+            "!", 
+            "end", 
+            ""
+        ]
+    ]
+}
+2017-05-29 19:47:32,653 p=5793 u=root |  PLAY RECAP *********************************************************************
+2017-05-29 19:47:32,654 p=5793 u=root |  192.168.25.10              : ok=4    changed=0    unreachable=0    failed=0   
+2017-05-29 19:47:32,654 p=5793 u=root |  192.168.25.20              : ok=4    changed=0    unreachable=0    failed=0   
+2017-05-29 19:50:59,370 p=5871 u=root |  PLAY [ios] *********************************************************************
+2017-05-29 19:50:59,476 p=5871 u=root |  TASK [OBTAIN LOGIN CREDENTIALS] ************************************************
+2017-05-29 19:50:59,545 p=5871 u=root |  ok: [192.168.25.10]
+2017-05-29 19:50:59,550 p=5871 u=root |  ok: [192.168.25.20]
+2017-05-29 19:50:59,551 p=5871 u=root |  TASK [DEFINE PROVIDER] *********************************************************
+2017-05-29 19:50:59,662 p=5871 u=root |  ok: [192.168.25.10]
+2017-05-29 19:50:59,666 p=5871 u=root |  ok: [192.168.25.20]
+2017-05-29 19:50:59,667 p=5871 u=root |  TASK [TELNET CHECK] ************************************************************
+2017-05-29 19:51:02,238 p=5871 u=root |  ok: [192.168.25.10]
+2017-05-29 19:51:02,533 p=5871 u=root |  ok: [192.168.25.20]
+2017-05-29 19:51:02,534 p=5871 u=root |  TASK [debug] *******************************************************************
+2017-05-29 19:51:02,645 p=5871 u=root |  ok: [192.168.25.10] => {
+    "vty.stdout_lines": [
+        [
+            "line vty 0 4", 
+            " privilege level 15", 
+            " password ********", 
+            " login local", 
+            " transport input ssh", 
+            "line vty 5 15", 
+            " privilege level 15", 
+            " login local", 
+            " transport input ssh", 
+            "!", 
+            "!", 
+            "end", 
+            ""
+        ]
+    ]
+}
+2017-05-29 19:51:02,649 p=5871 u=root |  ok: [192.168.25.20] => {
+    "vty.stdout_lines": [
+        [
+            "line vty 0 4", 
+            " privilege level 15", 
+            " password ********", 
+            " login local", 
+            " transport input ssh", 
+            "!", 
+            "!", 
+            "end", 
+            ""
+        ]
+    ]
+}
+2017-05-29 19:51:02,652 p=5871 u=root |  PLAY RECAP *********************************************************************
+2017-05-29 19:51:02,652 p=5871 u=root |  192.168.25.10              : ok=4    changed=0    unreachable=0    failed=0   
+2017-05-29 19:51:02,652 p=5871 u=root |  192.168.25.20              : ok=4    changed=0    unreachable=0    failed=0   
+2017-05-29 20:03:17,818 p=6010 u=root |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/etc/ansible/disable_telnet_playbook': line 25, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      parents:line vty 0 15
+    register: disable_telnet
+    ^ here
+
+2017-05-29 20:03:46,956 p=6021 u=root |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/etc/ansible/disable_telnet_playbook': line 25, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      parents:line vty 0 15
+    register: vty
+    ^ here
+
+2017-05-29 20:04:03,529 p=6030 u=root |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/etc/ansible/disable_telnet_playbook': line 25, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      parents:line vty 0 15
+#    register: vty
+^ here
+
+2017-05-29 20:04:48,985 p=6039 u=root |  PLAY [ios] *********************************************************************
+2017-05-29 20:04:49,048 p=6039 u=root |  TASK [OBTAIN LOGIN CREDENTIALS] ************************************************
+2017-05-29 20:04:49,117 p=6039 u=root |  ok: [192.168.25.10]
+2017-05-29 20:04:49,137 p=6039 u=root |  ok: [192.168.25.20]
+2017-05-29 20:04:49,140 p=6039 u=root |  TASK [DEFINE PROVIDER] *********************************************************
+2017-05-29 20:04:49,265 p=6039 u=root |  ok: [192.168.25.10]
+2017-05-29 20:04:49,270 p=6039 u=root |  ok: [192.168.25.20]
+2017-05-29 20:04:49,330 p=6039 u=root |  TASK [DISABLE TELNET] **********************************************************
+2017-05-29 20:04:52,011 p=6039 u=root |  changed: [192.168.25.10]
+2017-05-29 20:04:52,441 p=6039 u=root |  changed: [192.168.25.20]
+2017-05-29 20:04:52,444 p=6039 u=root |  PLAY RECAP *********************************************************************
+2017-05-29 20:04:52,445 p=6039 u=root |  192.168.25.10              : ok=3    changed=1    unreachable=0    failed=0   
+2017-05-29 20:04:52,445 p=6039 u=root |  192.168.25.20              : ok=3    changed=1    unreachable=0    failed=0   
+2017-05-29 23:56:13,233 p=6687 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/etc/ansible/NAPALM_1_playbook': line 19, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: "create a diff"
+    ^ here
+
+
+The error appears to have been in '/etc/ansible/NAPALM_1_playbook': line 19, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: "create a diff"
+    ^ here
+
+2017-05-29 23:57:41,252 p=6716 u=root |  PLAY [all] *********************************************************************
+2017-05-29 23:57:41,492 p=6716 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-29 23:57:41,628 p=6716 u=root |  fatal: [192.168.25.10]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Unable to find 'secrets.yml' in expected paths."}
+2017-05-29 23:57:41,673 p=6716 u=root |  fatal: [192.168.25.20]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Unable to find 'secrets.yml' in expected paths."}
+2017-05-29 23:57:41,674 p=6716 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-29 23:57:41,674 p=6716 u=root |  PLAY RECAP *********************************************************************
+2017-05-29 23:57:41,677 p=6716 u=root |  192.168.25.10              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-29 23:57:41,677 p=6716 u=root |  192.168.25.20              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 00:06:46,346 p=13853 u=root |  Reading ciphertext input from stdin
+2017-05-30 00:09:01,324 p=13853 u=root |   [ERROR]: User interrupted execution
+
+2017-05-30 00:09:12,994 p=13873 u=root |  ERROR! input is not vault encrypted data for secrets.yaml
+2017-05-30 00:09:43,686 p=13880 u=root |  PLAY [all] *********************************************************************
+2017-05-30 00:09:43,994 p=13880 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-30 00:09:44,191 p=13880 u=root |  fatal: [192.168.25.10]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Unable to find 'secrets.yml' in expected paths."}
+2017-05-30 00:09:44,194 p=13880 u=root |  fatal: [192.168.25.20]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Unable to find 'secrets.yml' in expected paths."}
+2017-05-30 00:09:44,196 p=13880 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-30 00:09:44,196 p=13880 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 00:09:44,196 p=13880 u=root |  192.168.25.10              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 00:09:44,196 p=13880 u=root |  192.168.25.20              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 00:14:40,247 p=13934 u=root |  PLAY [all] *********************************************************************
+2017-05-30 00:14:40,280 p=13934 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-30 00:14:40,403 p=13934 u=root |  fatal: [192.168.25.10]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Unable to find 'secrets.yml' in expected paths."}
+2017-05-30 00:14:40,542 p=13934 u=root |  fatal: [192.168.25.20]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Unable to find 'secrets.yml' in expected paths."}
+2017-05-30 00:14:40,543 p=13934 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-30 00:14:40,543 p=13934 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 00:14:40,543 p=13934 u=root |  192.168.25.10              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 00:14:40,543 p=13934 u=root |  192.168.25.20              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:09:16,878 p=4190 u=root |  PLAY [ios] *********************************************************************
+2017-05-30 21:09:17,264 p=4190 u=root |  TASK [OBTAIN LOGIN CREDENTIALS] ************************************************
+2017-05-30 21:09:17,406 p=4190 u=root |  ok: [192.168.25.10]
+2017-05-30 21:09:17,406 p=4190 u=root |  ok: [192.168.25.20]
+2017-05-30 21:09:17,412 p=4190 u=root |  TASK [DEFINE PROVIDER] *********************************************************
+2017-05-30 21:09:18,091 p=4190 u=root |  ok: [192.168.25.10]
+2017-05-30 21:09:18,092 p=4190 u=root |  ok: [192.168.25.20]
+2017-05-30 21:09:18,092 p=4190 u=root |  TASK [SHOW RUN | BEG BANNER] ***************************************************
+2017-05-30 21:09:20,133 p=4190 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.25.10
+2017-05-30 21:09:20,134 p=4190 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_3BpEqI/ansible_module_ios_command.py\", line 237, in <module>\n    main()\n  File \"/tmp/ansible_3BpEqI/ansible_module_ios_command.py\", line 200, in main\n    runner.add_command(**cmd)\n  File \"/tmp/ansible_3BpEqI/ansible_modlib.zip/ansible/module_utils/netcli.py\", line 147, in add_command\n  File \"/tmp/ansible_3BpEqI/ansible_modlib.zip/ansible/module_utils/network.py\", line 117, in cli\n  File \"/tmp/ansible_3BpEqI/ansible_modlib.zip/ansible/module_utils/network.py\", line 148, in connect\n  File \"/tmp/ansible_3BpEqI/ansible_modlib.zip/ansible/module_utils/ios.py\", line 180, in connect\n  File \"/tmp/ansible_3BpEqI/ansible_modlib.zip/ansible/module_utils/shell.py\", line 226, in connect\n  File \"/tmp/ansible_3BpEqI/ansible_modlib.zip/ansible/module_utils/shell.py\", line 96, in open\n  File \"/home/anuj/.local/lib/python2.7/site-packages/paramiko/client.py\", line 324, in connect\n    raise NoValidConnectionsError(errors)\nparamiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.25.10\n", "module_stdout": "", "msg": "MODULE FAILURE"}
+2017-05-30 21:09:20,137 p=4190 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.25.20
+2017-05-30 21:09:20,137 p=4190 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_l3XOR6/ansible_module_ios_command.py\", line 237, in <module>\n    main()\n  File \"/tmp/ansible_l3XOR6/ansible_module_ios_command.py\", line 200, in main\n    runner.add_command(**cmd)\n  File \"/tmp/ansible_l3XOR6/ansible_modlib.zip/ansible/module_utils/netcli.py\", line 147, in add_command\n  File \"/tmp/ansible_l3XOR6/ansible_modlib.zip/ansible/module_utils/network.py\", line 117, in cli\n  File \"/tmp/ansible_l3XOR6/ansible_modlib.zip/ansible/module_utils/network.py\", line 148, in connect\n  File \"/tmp/ansible_l3XOR6/ansible_modlib.zip/ansible/module_utils/ios.py\", line 180, in connect\n  File \"/tmp/ansible_l3XOR6/ansible_modlib.zip/ansible/module_utils/shell.py\", line 226, in connect\n  File \"/tmp/ansible_l3XOR6/ansible_modlib.zip/ansible/module_utils/shell.py\", line 96, in open\n  File \"/home/anuj/.local/lib/python2.7/site-packages/paramiko/client.py\", line 324, in connect\n    raise NoValidConnectionsError(errors)\nparamiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.25.20\n", "module_stdout": "", "msg": "MODULE FAILURE"}
+2017-05-30 21:09:20,139 p=4190 u=root |  	to retry, use: --limit @/etc/ansible/banner_playbook.retry
+
+2017-05-30 21:09:20,139 p=4190 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 21:09:20,139 p=4190 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 21:09:20,139 p=4190 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 21:11:35,415 p=4255 u=anuj |  PLAY [ios] *********************************************************************
+2017-05-30 21:11:35,457 p=4255 u=anuj |  TASK [OBTAIN LOGIN CREDENTIALS] ************************************************
+2017-05-30 21:11:35,532 p=4255 u=anuj |  fatal: [192.168.25.10]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "an error occurred while trying to read the file '/etc/ansible/secrets.yaml': [Errno 13] Permission denied: '/etc/ansible/secrets.yaml'"}
+2017-05-30 21:11:35,545 p=4255 u=anuj |  fatal: [192.168.25.20]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "an error occurred while trying to read the file '/etc/ansible/secrets.yaml': [Errno 13] Permission denied: '/etc/ansible/secrets.yaml'"}
+2017-05-30 21:11:35,554 p=4255 u=anuj |  	to retry, use: --limit @/etc/ansible/banner_playbook.retry
+
+2017-05-30 21:11:35,554 p=4255 u=anuj |  PLAY RECAP *********************************************************************
+2017-05-30 21:11:35,555 p=4255 u=anuj |  192.168.25.10              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:11:35,555 p=4255 u=anuj |  192.168.25.20              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:11:43,572 p=4268 u=root |  PLAY [ios] *********************************************************************
+2017-05-30 21:11:43,602 p=4268 u=root |  TASK [OBTAIN LOGIN CREDENTIALS] ************************************************
+2017-05-30 21:11:43,680 p=4268 u=root |  ok: [192.168.25.10]
+2017-05-30 21:11:43,696 p=4268 u=root |  ok: [192.168.25.20]
+2017-05-30 21:11:43,698 p=4268 u=root |  TASK [DEFINE PROVIDER] *********************************************************
+2017-05-30 21:11:43,816 p=4268 u=root |  ok: [192.168.25.10]
+2017-05-30 21:11:43,821 p=4268 u=root |  ok: [192.168.25.20]
+2017-05-30 21:11:43,822 p=4268 u=root |  TASK [SHOW RUN | BEG BANNER] ***************************************************
+2017-05-30 21:11:44,839 p=4268 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.25.20
+2017-05-30 21:11:44,840 p=4268 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_qtSYLe/ansible_module_ios_command.py\", line 237, in <module>\n    main()\n  File \"/tmp/ansible_qtSYLe/ansible_module_ios_command.py\", line 200, in main\n    runner.add_command(**cmd)\n  File \"/tmp/ansible_qtSYLe/ansible_modlib.zip/ansible/module_utils/netcli.py\", line 147, in add_command\n  File \"/tmp/ansible_qtSYLe/ansible_modlib.zip/ansible/module_utils/network.py\", line 117, in cli\n  File \"/tmp/ansible_qtSYLe/ansible_modlib.zip/ansible/module_utils/network.py\", line 148, in connect\n  File \"/tmp/ansible_qtSYLe/ansible_modlib.zip/ansible/module_utils/ios.py\", line 180, in connect\n  File \"/tmp/ansible_qtSYLe/ansible_modlib.zip/ansible/module_utils/shell.py\", line 226, in connect\n  File \"/tmp/ansible_qtSYLe/ansible_modlib.zip/ansible/module_utils/shell.py\", line 96, in open\n  File \"/home/anuj/.local/lib/python2.7/site-packages/paramiko/client.py\", line 324, in connect\n    raise NoValidConnectionsError(errors)\nparamiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.25.20\n", "module_stdout": "", "msg": "MODULE FAILURE"}
+2017-05-30 21:11:45,233 p=4268 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: paramiko.ssh_exception.BadHostKeyException: ('192.168.25.10', <paramiko.rsakey.RSAKey object at 0x7f889336a810>, <paramiko.rsakey.RSAKey object at 0x7f88921fcfd0>)
+2017-05-30 21:11:45,233 p=4268 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_sGaQPo/ansible_module_ios_command.py\", line 237, in <module>\n    main()\n  File \"/tmp/ansible_sGaQPo/ansible_module_ios_command.py\", line 200, in main\n    runner.add_command(**cmd)\n  File \"/tmp/ansible_sGaQPo/ansible_modlib.zip/ansible/module_utils/netcli.py\", line 147, in add_command\n  File \"/tmp/ansible_sGaQPo/ansible_modlib.zip/ansible/module_utils/network.py\", line 117, in cli\n  File \"/tmp/ansible_sGaQPo/ansible_modlib.zip/ansible/module_utils/network.py\", line 148, in connect\n  File \"/tmp/ansible_sGaQPo/ansible_modlib.zip/ansible/module_utils/ios.py\", line 180, in connect\n  File \"/tmp/ansible_sGaQPo/ansible_modlib.zip/ansible/module_utils/shell.py\", line 226, in connect\n  File \"/tmp/ansible_sGaQPo/ansible_modlib.zip/ansible/module_utils/shell.py\", line 96, in open\n  File \"/home/anuj/.local/lib/python2.7/site-packages/paramiko/client.py\", line 366, in connect\n    raise BadHostKeyException(hostname, server_key, our_server_key)\nparamiko.ssh_exception.BadHostKeyException: ('192.168.25.10', <paramiko.rsakey.RSAKey object at 0x7f889336a810>, <paramiko.rsakey.RSAKey object at 0x7f88921fcfd0>)\n", "module_stdout": "", "msg": "MODULE FAILURE"}
+2017-05-30 21:11:45,234 p=4268 u=root |  	to retry, use: --limit @/etc/ansible/banner_playbook.retry
+
+2017-05-30 21:11:45,234 p=4268 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 21:11:45,235 p=4268 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 21:11:45,235 p=4268 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 21:13:02,414 p=4344 u=root |   [WARNING]: Host file not found: host
+
+2017-05-30 21:13:02,415 p=4344 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-05-30 21:13:02,532 p=4344 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 21:13:09,986 p=4349 u=root |  PLAY [ios] *********************************************************************
+2017-05-30 21:13:10,015 p=4349 u=root |  TASK [SHOW VERSION] ************************************************************
+2017-05-30 21:13:11,337 p=4349 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: paramiko.ssh_exception.BadHostKeyException: ('192.168.25.10', <paramiko.rsakey.RSAKey object at 0x7f0892559390>, <paramiko.rsakey.RSAKey object at 0x7f08913f6090>)
+2017-05-30 21:13:11,337 p=4349 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_zKVqDh/ansible_module_ios_command.py\", line 237, in <module>\n    main()\n  File \"/tmp/ansible_zKVqDh/ansible_module_ios_command.py\", line 200, in main\n    runner.add_command(**cmd)\n  File \"/tmp/ansible_zKVqDh/ansible_modlib.zip/ansible/module_utils/netcli.py\", line 147, in add_command\n  File \"/tmp/ansible_zKVqDh/ansible_modlib.zip/ansible/module_utils/network.py\", line 117, in cli\n  File \"/tmp/ansible_zKVqDh/ansible_modlib.zip/ansible/module_utils/network.py\", line 148, in connect\n  File \"/tmp/ansible_zKVqDh/ansible_modlib.zip/ansible/module_utils/ios.py\", line 180, in connect\n  File \"/tmp/ansible_zKVqDh/ansible_modlib.zip/ansible/module_utils/shell.py\", line 226, in connect\n  File \"/tmp/ansible_zKVqDh/ansible_modlib.zip/ansible/module_utils/shell.py\", line 96, in open\n  File \"/home/anuj/.local/lib/python2.7/site-packages/paramiko/client.py\", line 366, in connect\n    raise BadHostKeyException(hostname, server_key, our_server_key)\nparamiko.ssh_exception.BadHostKeyException: ('192.168.25.10', <paramiko.rsakey.RSAKey object at 0x7f0892559390>, <paramiko.rsakey.RSAKey object at 0x7f08913f6090>)\n", "module_stdout": "", "msg": "MODULE FAILURE"}
+2017-05-30 21:13:11,345 p=4349 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: paramiko.ssh_exception.BadHostKeyException: ('192.168.25.20', <paramiko.rsakey.RSAKey object at 0x7f4ddcbeb390>, <paramiko.rsakey.RSAKey object at 0x7f4ddba7df10>)
+2017-05-30 21:13:11,345 p=4349 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_E0QcOX/ansible_module_ios_command.py\", line 237, in <module>\n    main()\n  File \"/tmp/ansible_E0QcOX/ansible_module_ios_command.py\", line 200, in main\n    runner.add_command(**cmd)\n  File \"/tmp/ansible_E0QcOX/ansible_modlib.zip/ansible/module_utils/netcli.py\", line 147, in add_command\n  File \"/tmp/ansible_E0QcOX/ansible_modlib.zip/ansible/module_utils/network.py\", line 117, in cli\n  File \"/tmp/ansible_E0QcOX/ansible_modlib.zip/ansible/module_utils/network.py\", line 148, in connect\n  File \"/tmp/ansible_E0QcOX/ansible_modlib.zip/ansible/module_utils/ios.py\", line 180, in connect\n  File \"/tmp/ansible_E0QcOX/ansible_modlib.zip/ansible/module_utils/shell.py\", line 226, in connect\n  File \"/tmp/ansible_E0QcOX/ansible_modlib.zip/ansible/module_utils/shell.py\", line 96, in open\n  File \"/home/anuj/.local/lib/python2.7/site-packages/paramiko/client.py\", line 366, in connect\n    raise BadHostKeyException(hostname, server_key, our_server_key)\nparamiko.ssh_exception.BadHostKeyException: ('192.168.25.20', <paramiko.rsakey.RSAKey object at 0x7f4ddcbeb390>, <paramiko.rsakey.RSAKey object at 0x7f4ddba7df10>)\n", "module_stdout": "", "msg": "MODULE FAILURE"}
+2017-05-30 21:13:11,349 p=4349 u=root |  	to retry, use: --limit @/etc/ansible/version-IOS_playbook.retry
+
+2017-05-30 21:13:11,350 p=4349 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 21:13:11,350 p=4349 u=root |  192.168.25.10              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:13:11,350 p=4349 u=root |  192.168.25.20              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:14:58,841 p=4429 u=root |  PLAY [ios] *********************************************************************
+2017-05-30 21:14:58,856 p=4429 u=root |  TASK [SHOW VERSION] ************************************************************
+2017-05-30 21:15:00,035 p=4429 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: paramiko.ssh_exception.BadHostKeyException: ('192.168.25.10', <paramiko.rsakey.RSAKey object at 0x7fb07bfa8390>, <paramiko.rsakey.RSAKey object at 0x7fb07ae45090>)
+2017-05-30 21:15:00,036 p=4429 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_D0uK18/ansible_module_ios_command.py\", line 237, in <module>\n    main()\n  File \"/tmp/ansible_D0uK18/ansible_module_ios_command.py\", line 200, in main\n    runner.add_command(**cmd)\n  File \"/tmp/ansible_D0uK18/ansible_modlib.zip/ansible/module_utils/netcli.py\", line 147, in add_command\n  File \"/tmp/ansible_D0uK18/ansible_modlib.zip/ansible/module_utils/network.py\", line 117, in cli\n  File \"/tmp/ansible_D0uK18/ansible_modlib.zip/ansible/module_utils/network.py\", line 148, in connect\n  File \"/tmp/ansible_D0uK18/ansible_modlib.zip/ansible/module_utils/ios.py\", line 180, in connect\n  File \"/tmp/ansible_D0uK18/ansible_modlib.zip/ansible/module_utils/shell.py\", line 226, in connect\n  File \"/tmp/ansible_D0uK18/ansible_modlib.zip/ansible/module_utils/shell.py\", line 96, in open\n  File \"/home/anuj/.local/lib/python2.7/site-packages/paramiko/client.py\", line 366, in connect\n    raise BadHostKeyException(hostname, server_key, our_server_key)\nparamiko.ssh_exception.BadHostKeyException: ('192.168.25.10', <paramiko.rsakey.RSAKey object at 0x7fb07bfa8390>, <paramiko.rsakey.RSAKey object at 0x7fb07ae45090>)\n", "module_stdout": "", "msg": "MODULE FAILURE"}
+2017-05-30 21:15:00,148 p=4429 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: paramiko.ssh_exception.BadHostKeyException: ('192.168.25.20', <paramiko.rsakey.RSAKey object at 0x7f478f0e2390>, <paramiko.rsakey.RSAKey object at 0x7f478df74f10>)
+2017-05-30 21:15:00,148 p=4429 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_x882uA/ansible_module_ios_command.py\", line 237, in <module>\n    main()\n  File \"/tmp/ansible_x882uA/ansible_module_ios_command.py\", line 200, in main\n    runner.add_command(**cmd)\n  File \"/tmp/ansible_x882uA/ansible_modlib.zip/ansible/module_utils/netcli.py\", line 147, in add_command\n  File \"/tmp/ansible_x882uA/ansible_modlib.zip/ansible/module_utils/network.py\", line 117, in cli\n  File \"/tmp/ansible_x882uA/ansible_modlib.zip/ansible/module_utils/network.py\", line 148, in connect\n  File \"/tmp/ansible_x882uA/ansible_modlib.zip/ansible/module_utils/ios.py\", line 180, in connect\n  File \"/tmp/ansible_x882uA/ansible_modlib.zip/ansible/module_utils/shell.py\", line 226, in connect\n  File \"/tmp/ansible_x882uA/ansible_modlib.zip/ansible/module_utils/shell.py\", line 96, in open\n  File \"/home/anuj/.local/lib/python2.7/site-packages/paramiko/client.py\", line 366, in connect\n    raise BadHostKeyException(hostname, server_key, our_server_key)\nparamiko.ssh_exception.BadHostKeyException: ('192.168.25.20', <paramiko.rsakey.RSAKey object at 0x7f478f0e2390>, <paramiko.rsakey.RSAKey object at 0x7f478df74f10>)\n", "module_stdout": "", "msg": "MODULE FAILURE"}
+2017-05-30 21:15:00,149 p=4429 u=root |  	to retry, use: --limit @/etc/ansible/version-IOS_playbook.retry
+
+2017-05-30 21:15:00,149 p=4429 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 21:15:00,149 p=4429 u=root |  192.168.25.10              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:15:00,150 p=4429 u=root |  192.168.25.20              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:29:31,212 p=4571 u=anuj |  PLAY [ios] *********************************************************************
+2017-05-30 21:29:31,241 p=4571 u=anuj |  TASK [OBTAIN LOGIN CREDENTIALS] ************************************************
+2017-05-30 21:29:31,319 p=4571 u=anuj |  ok: [192.168.25.10]
+2017-05-30 21:29:31,327 p=4571 u=anuj |  ok: [192.168.25.20]
+2017-05-30 21:29:31,331 p=4571 u=anuj |  TASK [DEFINE PROVIDER] *********************************************************
+2017-05-30 21:29:31,458 p=4571 u=anuj |  ok: [192.168.25.10]
+2017-05-30 21:29:31,460 p=4571 u=anuj |  ok: [192.168.25.20]
+2017-05-30 21:29:31,460 p=4571 u=anuj |  TASK [SHOW RUN | BEG BANNER] ***************************************************
+2017-05-30 21:29:34,132 p=4571 u=anuj |  ok: [192.168.25.20]
+2017-05-30 21:29:34,219 p=4571 u=anuj |  ok: [192.168.25.10]
+2017-05-30 21:29:34,260 p=4571 u=anuj |  TASK [debug] *******************************************************************
+2017-05-30 21:29:34,390 p=4571 u=anuj |  ok: [192.168.25.10] => {
+    "banner.stdout_lines": [
+        [
+            "banner motd ^CWelcome to Packetflow.com Labs^C", 
+            "!", 
+            "line con 0", 
+            " exec-timeout 0 0", 
+            " privilege level 15", 
+            " logging synchronous", 
+            " login local", 
+            " stopbits 1", 
+            "line aux 0", 
+            " exec-timeout 0 0", 
+            " privilege level 15", 
+            " logging synchronous", 
+            " stopbits 1", 
+            "line vty 0 4", 
+            " privilege level 15", 
+            " password ********", 
+            " login local", 
+            " transport input ssh", 
+            "line vty 5 15", 
+            " privilege level 15", 
+            " login local", 
+            " transport input ssh", 
+            "!", 
+            "!", 
+            "end", 
+            ""
+        ]
+    ]
+}
+2017-05-30 21:29:34,394 p=4571 u=anuj |  ok: [192.168.25.20] => {
+    "banner.stdout_lines": [
+        [
+            "banner motd ^CWelcome to Packetflow.com Labs^C", 
+            "!", 
+            "line con 0", 
+            " exec-timeout 0 0", 
+            " privilege level 15", 
+            " logging synchronous", 
+            " login local", 
+            " stopbits 1", 
+            "line aux 0", 
+            " exec-timeout 0 0", 
+            " privilege level 15", 
+            " logging synchronous", 
+            " stopbits 1", 
+            "line vty 0 4", 
+            " privilege level 15", 
+            " password ********", 
+            " login local", 
+            " transport input ssh", 
+            "line vty 5 15", 
+            " login", 
+            " transport input ssh", 
+            "!", 
+            "!", 
+            "end", 
+            ""
+        ]
+    ]
+}
+2017-05-30 21:29:34,410 p=4571 u=anuj |  TASK [CREATE NEW BANNER] *******************************************************
+2017-05-30 21:29:37,206 p=4571 u=anuj |  changed: [192.168.25.10]
+2017-05-30 21:29:37,209 p=4571 u=anuj |  changed: [192.168.25.20]
+2017-05-30 21:29:37,211 p=4571 u=anuj |  TASK [SHOW RUN | BEG BANNER] ***************************************************
+2017-05-30 21:29:39,679 p=4571 u=anuj |  ok: [192.168.25.10]
+2017-05-30 21:29:39,682 p=4571 u=anuj |  ok: [192.168.25.20]
+2017-05-30 21:29:39,683 p=4571 u=anuj |  TASK [debug] *******************************************************************
+2017-05-30 21:29:39,799 p=4571 u=anuj |  ok: [192.168.25.10] => {
+    "banner.stdout_lines": [
+        [
+            "banner motd ^CWelcome to Packetflow.com Labs^C", 
+            "!", 
+            "line con 0", 
+            " exec-timeout 0 0", 
+            " privilege level 15", 
+            " logging synchronous", 
+            " login local", 
+            " stopbits 1", 
+            "line aux 0", 
+            " exec-timeout 0 0", 
+            " privilege level 15", 
+            " logging synchronous", 
+            " stopbits 1", 
+            "line vty 0 4", 
+            " privilege level 15", 
+            " password ********", 
+            " login local", 
+            " transport input ssh", 
+            "line vty 5 15", 
+            " privilege level 15", 
+            " login local", 
+            " transport input ssh", 
+            "!", 
+            "!", 
+            "end", 
+            ""
+        ]
+    ]
+}
+2017-05-30 21:29:39,804 p=4571 u=anuj |  ok: [192.168.25.20] => {
+    "banner.stdout_lines": [
+        [
+            "banner motd ^CWelcome to Packetflow.com Labs^C", 
+            "!", 
+            "line con 0", 
+            " exec-timeout 0 0", 
+            " privilege level 15", 
+            " logging synchronous", 
+            " login local", 
+            " stopbits 1", 
+            "line aux 0", 
+            " exec-timeout 0 0", 
+            " privilege level 15", 
+            " logging synchronous", 
+            " stopbits 1", 
+            "line vty 0 4", 
+            " privilege level 15", 
+            " password ********", 
+            " login local", 
+            " transport input ssh", 
+            "line vty 5 15", 
+            " login", 
+            " transport input ssh", 
+            "!", 
+            "!", 
+            "end", 
+            ""
+        ]
+    ]
+}
+2017-05-30 21:29:39,805 p=4571 u=anuj |  PLAY RECAP *********************************************************************
+2017-05-30 21:29:39,806 p=4571 u=anuj |  192.168.25.10              : ok=7    changed=1    unreachable=0    failed=0   
+2017-05-30 21:29:39,806 p=4571 u=anuj |  192.168.25.20              : ok=7    changed=1    unreachable=0    failed=0   
+2017-05-30 21:30:34,980 p=4742 u=anuj |  ERROR! You must specify a playbook file to run
+2017-05-30 21:57:16,846 p=4872 u=anuj |  PLAY [all] *********************************************************************
+2017-05-30 21:57:16,893 p=4872 u=anuj |  TASK [obtain login credentials] ************************************************
+2017-05-30 21:57:16,978 p=4872 u=anuj |  fatal: [192.168.25.10]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Unable to find 'secrets.yml' in expected paths."}
+2017-05-30 21:57:16,982 p=4872 u=anuj |  fatal: [192.168.25.20]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Unable to find 'secrets.yml' in expected paths."}
+2017-05-30 21:57:16,986 p=4872 u=anuj |   [WARNING]: Could not create retry file '/etc/ansible/NAPALM_1_playbook.retry'.
+[Errno 13] Permission denied: u'/etc/ansible/NAPALM_1_playbook.retry'
+
+2017-05-30 21:57:16,986 p=4872 u=anuj |  PLAY RECAP *********************************************************************
+2017-05-30 21:57:16,986 p=4872 u=anuj |  192.168.25.10              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:57:16,986 p=4872 u=anuj |  192.168.25.20              : ok=0    changed=0    unreachable=0    failed=1   
+2017-05-30 21:58:29,283 p=4896 u=anuj |  PLAY [all] *********************************************************************
+2017-05-30 21:58:29,313 p=4896 u=anuj |  TASK [obtain login credentials] ************************************************
+2017-05-30 21:58:29,396 p=4896 u=anuj |  ok: [192.168.25.10]
+2017-05-30 21:58:29,406 p=4896 u=anuj |  ok: [192.168.25.20]
+2017-05-30 21:58:29,410 p=4896 u=anuj |  TASK [define provider] *********************************************************
+2017-05-30 21:58:29,570 p=4896 u=anuj |  ok: [192.168.25.20]
+2017-05-30 21:58:29,574 p=4896 u=anuj |  ok: [192.168.25.10]
+2017-05-30 21:58:29,575 p=4896 u=anuj |  TASK [create a diff] ***********************************************************
+2017-05-30 21:58:39,404 p=4896 u=anuj |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 21:58:39,407 p=4896 u=anuj |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 21:58:39,409 p=4896 u=anuj |   [WARNING]: Could not create retry file '/etc/ansible/NAPALM_1_playbook.retry'.
+[Errno 13] Permission denied: u'/etc/ansible/NAPALM_1_playbook.retry'
+
+2017-05-30 21:58:39,409 p=4896 u=anuj |  PLAY RECAP *********************************************************************
+2017-05-30 21:58:39,409 p=4896 u=anuj |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 21:58:39,409 p=4896 u=anuj |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:50:21,816 p=5235 u=anuj |  PLAY [all] *********************************************************************
+2017-05-30 23:50:21,958 p=5235 u=anuj |  TASK [obtain login credentials] ************************************************
+2017-05-30 23:50:22,038 p=5235 u=anuj |  ok: [192.168.25.10]
+2017-05-30 23:50:22,051 p=5235 u=anuj |  ok: [192.168.25.20]
+2017-05-30 23:50:22,058 p=5235 u=anuj |  TASK [define provider] *********************************************************
+2017-05-30 23:50:22,253 p=5235 u=anuj |  ok: [192.168.25.10]
+2017-05-30 23:50:22,256 p=5235 u=anuj |  ok: [192.168.25.20]
+2017-05-30 23:50:22,257 p=5235 u=anuj |  TASK [create a diff] ***********************************************************
+2017-05-30 23:50:28,518 p=5235 u=anuj |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:50:28,657 p=5235 u=anuj |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:50:28,658 p=5235 u=anuj |   [WARNING]: Could not create retry file '/etc/ansible/NAPALM_1_playbook.retry'.         [Errno 13] Permission denied:
+u'/etc/ansible/NAPALM_1_playbook.retry'
+
+2017-05-30 23:50:28,659 p=5235 u=anuj |  PLAY RECAP *********************************************************************
+2017-05-30 23:50:28,659 p=5235 u=anuj |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:50:28,659 p=5235 u=anuj |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:51:17,134 p=5311 u=anuj |  PLAY [all] *********************************************************************
+2017-05-30 23:51:17,185 p=5311 u=anuj |  TASK [obtain login credentials] ************************************************
+2017-05-30 23:51:17,265 p=5311 u=anuj |  ok: [192.168.25.10]
+2017-05-30 23:51:17,274 p=5311 u=anuj |  ok: [192.168.25.20]
+2017-05-30 23:51:17,275 p=5311 u=anuj |  TASK [define provider] *********************************************************
+2017-05-30 23:51:17,463 p=5311 u=anuj |  ok: [192.168.25.10]
+2017-05-30 23:51:17,466 p=5311 u=anuj |  ok: [192.168.25.20]
+2017-05-30 23:51:17,467 p=5311 u=anuj |  TASK [create a diff] ***********************************************************
+2017-05-30 23:51:23,634 p=5311 u=anuj |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:51:23,635 p=5311 u=anuj |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:51:23,638 p=5311 u=anuj |   [WARNING]: Could not create retry file '/etc/ansible/NAPALM_1_playbook.retry'.         [Errno 13] Permission denied:
+u'/etc/ansible/NAPALM_1_playbook.retry'
+
+2017-05-30 23:51:23,639 p=5311 u=anuj |  PLAY RECAP *********************************************************************
+2017-05-30 23:51:23,639 p=5311 u=anuj |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:51:23,639 p=5311 u=anuj |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:52:06,068 p=5382 u=anuj |  PLAY [all] *********************************************************************
+2017-05-30 23:52:06,083 p=5382 u=anuj |  TASK [obtain login credentials] ************************************************
+2017-05-30 23:52:06,144 p=5382 u=anuj |  ok: [192.168.25.10]
+2017-05-30 23:52:06,163 p=5382 u=anuj |  ok: [192.168.25.20]
+2017-05-30 23:52:06,171 p=5382 u=anuj |  TASK [define provider] *********************************************************
+2017-05-30 23:52:06,320 p=5382 u=anuj |  ok: [192.168.25.10]
+2017-05-30 23:52:06,325 p=5382 u=anuj |  ok: [192.168.25.20]
+2017-05-30 23:52:06,326 p=5382 u=anuj |  TASK [create a diff] ***********************************************************
+2017-05-30 23:52:12,350 p=5382 u=anuj |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:52:12,471 p=5382 u=anuj |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:52:12,473 p=5382 u=anuj |   [WARNING]: Could not create retry file '/etc/ansible/NAPALM_1_playbook.retry'.         [Errno 13] Permission denied:
+u'/etc/ansible/NAPALM_1_playbook.retry'
+
+2017-05-30 23:52:12,474 p=5382 u=anuj |  PLAY RECAP *********************************************************************
+2017-05-30 23:52:12,474 p=5382 u=anuj |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:52:12,474 p=5382 u=anuj |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:52:22,581 p=5445 u=root |  PLAY [all] *********************************************************************
+2017-05-30 23:52:22,597 p=5445 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-30 23:52:22,665 p=5445 u=root |  ok: [192.168.25.10]
+2017-05-30 23:52:22,670 p=5445 u=root |  ok: [192.168.25.20]
+2017-05-30 23:52:22,671 p=5445 u=root |  TASK [define provider] *********************************************************
+2017-05-30 23:52:22,792 p=5445 u=root |  ok: [192.168.25.10]
+2017-05-30 23:52:22,800 p=5445 u=root |  ok: [192.168.25.20]
+2017-05-30 23:52:22,801 p=5445 u=root |  TASK [create a diff] ***********************************************************
+2017-05-30 23:52:28,768 p=5445 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:52:28,942 p=5445 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:52:28,993 p=5445 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-30 23:52:28,993 p=5445 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 23:52:28,993 p=5445 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:52:28,993 p=5445 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:53:54,459 p=5522 u=root |  PLAY [all] *********************************************************************
+2017-05-30 23:53:54,489 p=5522 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-30 23:53:54,564 p=5522 u=root |  ok: [192.168.25.10]
+2017-05-30 23:53:54,578 p=5522 u=root |  ok: [192.168.25.20]
+2017-05-30 23:53:54,579 p=5522 u=root |  TASK [define provider] *********************************************************
+2017-05-30 23:53:54,694 p=5522 u=root |  ok: [192.168.25.10]
+2017-05-30 23:53:54,697 p=5522 u=root |  ok: [192.168.25.20]
+2017-05-30 23:53:54,698 p=5522 u=root |  TASK [create a diff] ***********************************************************
+2017-05-30 23:54:00,861 p=5522 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:54:00,863 p=5522 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-30 23:54:00,866 p=5522 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-30 23:54:00,866 p=5522 u=root |  PLAY RECAP *********************************************************************
+2017-05-30 23:54:00,866 p=5522 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-30 23:54:00,866 p=5522 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:30:57,013 p=5765 u=root |  PLAY [all] *********************************************************************
+2017-05-31 00:30:57,038 p=5765 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-31 00:30:57,096 p=5765 u=root |  ok: [192.168.25.10]
+2017-05-31 00:30:57,100 p=5765 u=root |  ok: [192.168.25.20]
+2017-05-31 00:30:57,101 p=5765 u=root |  TASK [define provider] *********************************************************
+2017-05-31 00:30:57,218 p=5765 u=root |  ok: [192.168.25.10]
+2017-05-31 00:30:57,220 p=5765 u=root |  ok: [192.168.25.20]
+2017-05-31 00:30:57,220 p=5765 u=root |  TASK [create a diff] ***********************************************************
+2017-05-31 00:31:03,332 p=5765 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:31:03,435 p=5765 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:31:03,436 p=5765 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-31 00:31:03,437 p=5765 u=root |  PLAY RECAP *********************************************************************
+2017-05-31 00:31:03,437 p=5765 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:31:03,437 p=5765 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:33:00,619 p=5837 u=root |  PLAY [all] *********************************************************************
+2017-05-31 00:33:00,654 p=5837 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-31 00:33:00,738 p=5837 u=root |  ok: [192.168.25.10]
+2017-05-31 00:33:00,747 p=5837 u=root |  ok: [192.168.25.20]
+2017-05-31 00:33:00,750 p=5837 u=root |  TASK [define provider] *********************************************************
+2017-05-31 00:33:00,954 p=5837 u=root |  ok: [192.168.25.10]
+2017-05-31 00:33:00,958 p=5837 u=root |  ok: [192.168.25.20]
+2017-05-31 00:33:00,962 p=5837 u=root |  TASK [create a diff] ***********************************************************
+2017-05-31 00:33:07,328 p=5837 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:33:07,381 p=5837 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:33:07,383 p=5837 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-31 00:33:07,383 p=5837 u=root |  PLAY RECAP *********************************************************************
+2017-05-31 00:33:07,383 p=5837 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:33:07,384 p=5837 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:33:25,672 p=5903 u=root |  PLAY [all] *********************************************************************
+2017-05-31 00:33:25,701 p=5903 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-31 00:33:25,776 p=5903 u=root |  ok: [192.168.25.10]
+2017-05-31 00:33:25,790 p=5903 u=root |  ok: [192.168.25.20]
+2017-05-31 00:33:25,801 p=5903 u=root |  TASK [define provider] *********************************************************
+2017-05-31 00:33:25,944 p=5903 u=root |  ok: [192.168.25.10]
+2017-05-31 00:33:25,972 p=5903 u=root |  ok: [192.168.25.20]
+2017-05-31 00:33:25,973 p=5903 u=root |  TASK [create a diff] ***********************************************************
+2017-05-31 00:33:32,296 p=5903 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:33:32,338 p=5903 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:33:32,346 p=5903 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-31 00:33:32,346 p=5903 u=root |  PLAY RECAP *********************************************************************
+2017-05-31 00:33:32,346 p=5903 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:33:32,346 p=5903 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:34:02,016 p=5967 u=root |  PLAY [all] *********************************************************************
+2017-05-31 00:34:02,045 p=5967 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-31 00:34:02,130 p=5967 u=root |  ok: [192.168.25.10]
+2017-05-31 00:34:02,132 p=5967 u=root |  ok: [192.168.25.20]
+2017-05-31 00:34:02,133 p=5967 u=root |  TASK [define provider] *********************************************************
+2017-05-31 00:34:02,246 p=5967 u=root |  ok: [192.168.25.10]
+2017-05-31 00:34:02,248 p=5967 u=root |  ok: [192.168.25.20]
+2017-05-31 00:34:02,248 p=5967 u=root |  TASK [create a diff] ***********************************************************
+2017-05-31 00:34:08,192 p=5967 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:34:08,398 p=5967 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:34:08,400 p=5967 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-31 00:34:08,400 p=5967 u=root |  PLAY RECAP *********************************************************************
+2017-05-31 00:34:08,400 p=5967 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:34:08,401 p=5967 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:37:26,339 p=6040 u=root |  PLAY [all] *********************************************************************
+2017-05-31 00:37:26,372 p=6040 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-31 00:37:26,457 p=6040 u=root |  ok: [192.168.25.10]
+2017-05-31 00:37:26,495 p=6040 u=root |  ok: [192.168.25.20]
+2017-05-31 00:37:26,497 p=6040 u=root |  TASK [define provider] *********************************************************
+2017-05-31 00:37:26,628 p=6040 u=root |  ok: [192.168.25.10]
+2017-05-31 00:37:26,631 p=6040 u=root |  ok: [192.168.25.20]
+2017-05-31 00:37:26,632 p=6040 u=root |  TASK [create a diff] ***********************************************************
+2017-05-31 00:37:32,582 p=6040 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:37:32,806 p=6040 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:37:32,809 p=6040 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-31 00:37:32,809 p=6040 u=root |  PLAY RECAP *********************************************************************
+2017-05-31 00:37:32,809 p=6040 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:37:32,810 p=6040 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:37:48,492 p=6104 u=root |  PLAY [all] *********************************************************************
+2017-05-31 00:37:48,524 p=6104 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-31 00:37:48,602 p=6104 u=root |  ok: [192.168.25.10]
+2017-05-31 00:37:48,619 p=6104 u=root |  ok: [192.168.25.20]
+2017-05-31 00:37:48,621 p=6104 u=root |  TASK [define provider] *********************************************************
+2017-05-31 00:37:48,762 p=6104 u=root |  ok: [192.168.25.10]
+2017-05-31 00:37:48,766 p=6104 u=root |  ok: [192.168.25.20]
+2017-05-31 00:37:48,767 p=6104 u=root |  TASK [create a diff] ***********************************************************
+2017-05-31 00:37:54,819 p=6104 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:37:54,934 p=6104 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:37:54,935 p=6104 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-31 00:37:54,935 p=6104 u=root |  PLAY RECAP *********************************************************************
+2017-05-31 00:37:54,936 p=6104 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:37:54,936 p=6104 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:45:11,596 p=6184 u=root |  PLAY [all] *********************************************************************
+2017-05-31 00:45:11,627 p=6184 u=root |  TASK [obtain login credentials] ************************************************
+2017-05-31 00:45:11,702 p=6184 u=root |  ok: [192.168.25.10]
+2017-05-31 00:45:11,715 p=6184 u=root |  ok: [192.168.25.20]
+2017-05-31 00:45:11,718 p=6184 u=root |  TASK [define provider] *********************************************************
+2017-05-31 00:45:11,853 p=6184 u=root |  ok: [192.168.25.10]
+2017-05-31 00:45:11,856 p=6184 u=root |  ok: [192.168.25.20]
+2017-05-31 00:45:11,857 p=6184 u=root |  TASK [create a diff] ***********************************************************
+2017-05-31 00:45:18,090 p=6184 u=root |  fatal: [192.168.25.20]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:45:18,142 p=6184 u=root |  fatal: [192.168.25.10]: FAILED! => {"changed": false, "failed": true, "msg": "cannot connect to device: An error occurred in dynamically determining remote file system: dir %Error opening disk0:/ (No such device)"}
+2017-05-31 00:45:18,144 p=6184 u=root |  	to retry, use: --limit @/etc/ansible/NAPALM_1_playbook.retry
+
+2017-05-31 00:45:18,144 p=6184 u=root |  PLAY RECAP *********************************************************************
+2017-05-31 00:45:18,144 p=6184 u=root |  192.168.25.10              : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 00:45:18,144 p=6184 u=root |  192.168.25.20              : ok=2    changed=0    unreachable=0    failed=1   
